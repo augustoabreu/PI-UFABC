@@ -1,24 +1,24 @@
 /* MediaPonderada.java
- * Implementação de algoritmo para cálculo de
- * média aritmética entre dois números com peso w e (1-w) respectivamente.
+ * ImplementaÃ§Ã£o de algoritmo para cÃ¡lculo de
+ * mÃ©dia aritmÃ©tica entre dois nÃºmeros com peso w e (1-w) respectivamente.
  * Entrada: double x, y, w
- * Saída: Média m
+ * SaÃ­da: MÃ©dia m
  */
 
 /* Ex. 02: Media ponderada
- * Altere o código em Java para calcular a média entre dois números para
- * capturar um terceiro valor w (peça gentilmente para o usuário entrar com
- * um valor entre 0 e 1), e usá-lo para ponderar a média da seguinte maneira:
+ * Altere o cÃ³digo em Java para calcular a mÃ©dia entre dois nÃºmeros para
+ * capturar um terceiro valor w (peÃ§a gentilmente para o usuÃ¡rio entrar com
+ * um valor entre 0 e 1), e usÃ¡-lo para ponderar a mÃ©dia da seguinte maneira:
  * m = w*x + (1-w)*y
  */
 
-import java.util.Scanner;  // pedindo permissão para usar a função Scanner
+import java.util.Scanner;  // pedindo permissÃ£o para usar a funÃ§Ã£o Scanner
 
 public class MediaPonderada{
 	public static void main( String[] args ){
 		double x,y, w; // entrada
 		double m;   // media
-		Scanner leitor = new Scanner(System.in); // para pegar entrada do usuário
+		Scanner leitor = new Scanner(System.in); // para pegar entrada do usuÃ¡rio
 		System.out.print("Entre com o valor de x:");
 		x = leitor.nextDouble();
 		System.out.print("Entre com o valor de y:");
@@ -28,7 +28,7 @@ public class MediaPonderada{
 
 		m = ( w*x + (1-w)*y ) / 2;
 
-		System.out.println("A média ponderada entre "+x+" e "+y+" é: "+m);
+		System.out.println("A mÃ©dia ponderada entre "+x+" e "+y+" Ã©: "+m);
 		
 	}
 }

@@ -1,40 +1,40 @@
 /* SegundoGrau.java
- * ImplementaÁ„o de algoritmo para c·lculo da
+ * Implementa√ß√£o de algoritmo para c√°lculo da
  * eq. ax^2 + bx + c = 0
  * Entrada: a, b, c (quais os tipos?)
- * SaÌda: x1, x2 (quais os tipos?)
+ * Sa√≠da: x1, x2 (quais os tipos?)
  */
 
 /* Ex. 01: Equacao Segundo Grau
- * Complete o cÛdigo a seguir para, dado os valores a, b, c 
+ * Complete o c√≥digo a seguir para, dado os valores a, b, c 
  * calcular o valor de x1 e x2.
- * … interessante, antes de escrever o cÛdigo, 
- * escrevar um breve passo a passo do que ser· feito, em forma de coment·rios.
- * Nesse cÛdigo isso j· foi feito para vocÍ!
+ * √â interessante, antes de escrever o c√≥digo, 
+ * escrevar um breve passo a passo do que ser√° feito, em forma de coment√°rios.
+ * Nesse c√≥digo isso j√° foi feito para voc√™!
  */
 
-import java.util.Scanner;  // pedindo permiss„o para usar a funÁ„o Scanner
+import java.util.Scanner;  // pedindo permiss√£o para usar a fun√ß√£o Scanner
 
 public class SegundoGrau{
 	public static void main( String[] args ){
-		double a,b,c; // declare as variaveis a serem utilizadas
+		double a,b,c, d1; // declare as variaveis a serem utilizadas
 		double x1, x2;
 		double delta;
-		Scanner leitor = new Scanner(System.in); // para pegar entrada do usu·rio
+		Scanner leitor = new Scanner(System.in); // para pegar entrada do usu√°rio
 
-		System.out.println("Entre com os valores de a, b e c: "); // escreva pedindo para o usu·rio entrar com a, b, c
-		a = leitor.nextFloat(); // capture tais valores
-		b = leitor.nextFloat();
-		c = leitor.nextFloat();
+		System.out.println("Entre com os valores de a, b e c: "); // escreva pedindo para o usu√°rio entrar com a, b, c
+		a = leitor.nextDouble(); // capture tais valores
+		b = leitor.nextDouble();
+		c = leitor.nextDouble();
 
 		// x = -b +/- raiz(b^2 - 4ac)  / 2a
-		delta = Math.sqrt( Math.pow(b,2) - (4*a*c) );
+		delta = Math.sqrt( (Math.pow(b,2)) - (4*a*c) );
 
-		x1 = (-b + delta)/(2*a); // calcule o valor de x1
-		x2 = (-b + delta)/(2*a); // calcule o valor de x2
+		x1 = (-b + delta)/(2.0*a); // calcule o valor de x1
+		x2 = (-b - delta)/(2.0*a); // calcule o valor de x2
 		// dica: use uma variavel extra para pre-calcular parte da solucao
 		
-		System.out.println("As soluÁıes para a eq. = "+x1+ " e " + x2); // imprima na tela
+		System.out.println("As solucoes para a eq. = "+x1+ " e " + x2); // imprima na tela
 		
 	}
 }

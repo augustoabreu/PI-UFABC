@@ -1,33 +1,46 @@
 /* Temperatura.java
- * Implementação de algoritmo para conversão 
+ * ImplementaÃ§Ã£o de algoritmo para conversÃ£o 
  * de temperatura em Celsius para Kelvin e Fahrenheit
  * Entrada: tempCelsius
- * Saída: tempKelvin e tempFahrenheit
+ * SaÃ­da: tempKelvin e tempFahrenheit
  *
- * Author: Fabrício Olivetti de França
- * Disciplina Processamento da Informação
+ * Author: FabrÃ­cio Olivetti de FranÃ§a
+ * Disciplina Processamento da InformaÃ§Ã£o
  * Universidade Federal do ABC
  */
 
-/* Ex. 03: Conversão de Temperatura
- * Complete o código a seguir para, dada uma temperatura em Celsius 
+/* Ex. 03: ConversÃ£o de Temperatura
+ * Complete o cÃ³digo a seguir para, dada uma temperatura em Celsius 
  * converter para o equivalente em Kelvin e Fahrenheit.
- * É interessante, antes de escrever o código, 
- * escrevar um breve passo a passo do que será feito, em forma de comentários.
- * Nesse código isso já foi feito para você!
+ * Ã‰ interessante, antes de escrever o cÃ³digo, 
+ * escrevar um breve passo a passo do que serÃ¡ feito, em forma de comentÃ¡rios.
+ * Nesse cÃ³digo isso jÃ¡ foi feito para vocÃª!
  *
  * Dica: use double
  */
 
-import java.util.Scanner;  // pedindo permissão para usar a função Scanner
+import java.util.Scanner;  // pedindo permissÃ£o para usar a funÃ§Ã£o Scanner
 
 public class Temperatura{
 	public static void main( String[] args ){
 		// declare as variaveis a serem utilizadas
-		// escreva pedindo para o usuário entrar com a temperatura em Celsius
+		double c, f, k;
+
+		// escreva pedindo para o usuÃ¡rio entrar com a temperatura em Celsius
+		Scanner temp = new Scanner(System.in);
+
+		System.out.println("Insira a temperatura em ÂºC: ");
+		c = temp.nextDouble();
+
 		// calcule a temperatura em Kelvin
+		k = c + 273.15;
+
 		// calcule a temperatura em Fahrenheit 
+		f = c * 1.8 + 32;
+
 		// imprima os resultados na tela
-		
+		System.out.println(c + "ÂºC em Kelvin: " + k);
+		System.out.println(c + "ÂºC em Fahrenheit: " + f);
+
 	}
 }

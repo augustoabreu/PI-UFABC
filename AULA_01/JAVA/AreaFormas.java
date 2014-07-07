@@ -1,47 +1,83 @@
 /* AreaFormas.java
- * ImplementaÁ„o de algoritmo para c·lculo da
- * ·rea e volume de diferentes formas geomÈtricas
- * Entrada: dimensıes da forma
- * SaÌda: ·rea ou volume
+ * Implementa√ß√£o de algoritmo para c√°lculo da
+ * √°rea e volume de diferentes formas geom√©tricas
+ * Entrada: dimens√µes da forma
+ * Sa√≠da: √°rea ou volume
  *
- * Author: FabrÌcio Olivetti de FranÁa
- * Disciplina Processamento da InformaÁ„o
+ * Author: Fabr√≠cio Olivetti de Fran√ßa
+ * Disciplina Processamento da Informa√ß√£o
  * Universidade Federal do ABC
 */
 
 /* Ex. 05: Area e Volume das Formas
- * Complete o cÛdigo a seguir para, capturar a dimens„o de diferentes formas 
- * e retornar a ·rea ou volume dela (dependendo da forma).
- * … interessante, antes de escrever o cÛdigo, 
- * escrevar um breve passo a passo do que ser· feito, em forma de coment·rios.
- * Nesse cÛdigo isso ainda n„o foi feito! Mas j· foi dado um exemplo para o ret‚ngulo.
+ * Complete o c√≥digo a seguir para, capturar a dimens√£o de diferentes formas 
+ * e retornar a √°rea ou volume dela (dependendo da forma).
+ * √â interessante, antes de escrever o c√≥digo, 
+ * escrevar um breve passo a passo do que ser√° feito, em forma de coment√°rios.
+ * Nesse c√≥digo isso ainda n√£o foi feito! Mas j√° foi dado um exemplo para o ret√¢ngulo.
  */
 
-import java.util.Scanner;  // pedindo permiss„o para usar a funÁ„o Scanner
+import java.util.Scanner;  // pedindo permiss√£o para usar a fun√ß√£o Scanner
 
 public class AreaFormas{
 	public static void main( String[] args ){
-		double area, volume;    // todas as formas podem utilizar essas vari·veis
+		double area, volume;    // todas as formas podem utilizar essas vari√°veis
 		double altura, largura; // declare as variaveis a serem utilizadas
+		double PI;
+		PI = 3.14159265359f;
 
 		Scanner leitor = new Scanner(System.in); 
-		System.out.println("Entre com a altura do ret‚ngulo: "); // escreva pedindo a altura
+		System.out.println( "Entre com a altura do ret√¢ngulo: " ); // escreva pedindo a altura
 		altura = leitor.nextDouble();
-		System.out.println("Entre com a largura do ret‚ngulo: "); // escreva pedindo a largura
+		System.out.println( "Entre com a largura do ret√¢ngulo: " ); // escreva pedindo a largura
 		largura = leitor.nextDouble();
 
 		area = altura*largura;
-		System.out.println("Area do ret‚ngulo È "+area); // mostra o resultado
+		System.out.println( "Area do ret√¢ngulo √© " + area ); // mostra o resultado
 
-		// tri‚ngulo
-		
-		// circunferÍncia
+		// tri√¢ngulo
+		System.out.println( "Entre com a altura do tri√¢ngulo: " ); // solicita altura triangulo
+		altura = leitor.nextDouble();
+		System.out.println( "Entre com a base do tri√¢ngulo: " ); // solicita base
+		largura = leitor.nextDouble(); // Recebe a base na vari√°vel 'largura'
+
+		area = ( largura * altura ) / 2;
+		System.out.println( "√Årea do tri√¢ngulo: " + area );
+
+		// circunfer√™ncia
+		System.out.println( "Entre com o raio da circunfer√™ncia: " ); // Solicita o raio da circunfer√™ncia
+		altura = leitor.nextDouble(); // Recebe o raio na vari√°vel 'altura'
+
+		area = altura * PI;
+		System.out.println( "√Årea da circunfer√™ncia: " + area ); // Imprime √°rea da circunfer√™ncia
 
 		// Cubo
+		System.out.println( "Entre com o tamanho da aresta do cubo: " ); // Solicita o tamanho da aresta
+		altura = leitor.nextDouble(); // Recebe o tamanho da aresta na vari√°vel 'altura'
+
+		area = Math.pow( altura, 2 ) * 6;
+		volume = Math.pow( altura, 3 );
+		System.out.println( "√Årea do cubo: " + area );
+		System.out.println( "Volume do cubo: " + volume );
 
 		// Esfera
+		System.out.println( "Entre com o raio da esfera: " );
+		altura = leitor.nextDouble(); // Recebe o raio na vari√°vel 'altura'
 
-		// Pir‚mide
-		
+		area = 4 * PI * Math.pow( altura, 2 );
+		volume = ( 4/3 ) * PI * Math.pow( altura, 3 );
+		System.out.println( "√Årea da esfera: " + area );
+		System.out.println( "Volume da esfera: " + volume );
+
+		// Pir√¢mide
+		System.out.println( "Entre com o lado da base da pir√¢mide quadrada: " );
+		largura = leitor.nextDouble(); // Recebe a base na vari√°vel 'largura'
+		System.out.println( "Entre com a altura dos tri√¢ngulos laterais da pir√¢mide: " );
+		altura = leitor.nextDouble(); // Recebe a altura dos tri√¢ngulos laterais
+
+		area = Math.pow( largura, 2 ) + 4 * ( largura * altura / 2 );
+		volume = ( Math.pow( largura, 2 ) * altura ) / 3;
+		System.out.println( "√Årea da pir√¢mide: " + area );
+		System.out.println( "Volume da pir√¢mide: " + volume );
 	}
 }

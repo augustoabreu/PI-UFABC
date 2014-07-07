@@ -1,32 +1,43 @@
 /* IdadeSegundos.java
- * Implementação de algoritmo para cálculo da
- * idade do usuário em segundos
+ * ImplementaÃ§Ã£o de algoritmo para cÃ¡lculo da
+ * idade do usuÃ¡rio em segundos
  * Entrada: int idade
- * Saída: int segundos
+ * SaÃ­da: int segundos
  *
- * Author: Fabrício Olivetti de França
- * Disciplina Processamento da Informação
+ * Author: FabrÃ­cio Olivetti de FranÃ§a
+ * Disciplina Processamento da InformaÃ§Ã£o
  * Universidade Federal do ABC
  */
 
 /* Ex. 04: Idade em Segundos
- * Complete o código a seguir para, dada a idade do usuário em anos 
+ * Complete o cÃ³digo a seguir para, dada a idade do usuÃ¡rio em anos 
  * converter para o equivalente em segundos.
- * É interessante, antes de escrever o código, 
- * escrevar um breve passo a passo do que será feito, em forma de comentários.
- * Nesse código isso já foi feito para você!
+ * Ã‰ interessante, antes de escrever o cÃ³digo, 
+ * escrevar um breve passo a passo do que serÃ¡ feito, em forma de comentÃ¡rios.
+ * Nesse cÃ³digo isso jÃ¡ foi feito para vocÃª!
  */
 
-import java.util.Scanner;  // pedindo permissão para usar a função Scanner
+import java.util.Scanner;  // pedindo permissÃ£o para usar a funÃ§Ã£o Scanner
 
 public class IdadeSegundos{
 	public static void main( String[] args ){
 		// declare as variaveis a serem utilizadas
-		// escreva pedindo para o usuário entrar com sua idade
+		int i, s;
+		// escreva pedindo para o usuÃ¡rio entrar com sua idade
+		System.out.println("Insira sua idade: ");
+
 		// capture a idade dele
+		Scanner idade = new Scanner(System.in);
+		i = idade.nextInt();
+
 		// calcule essa idade em segundos
-		// Faça melhorias para aumentar a precisão da resposta
+		s = i * 365 * 24 * 60 * 60;
+
+		// FaÃ§a melhorias para aumentar a precisÃ£o da resposta
+
+		
 		// imprima na tela
+		System.out.println("Sua idade em segundos: " + s).
 		
 	}
 }
